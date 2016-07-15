@@ -1,0 +1,14 @@
+/**
+ * Overridden Stylesheet.
+ */
+/**
+ * Import Compass Library.
+ */
+/* line 9, ../sass/style.scss */
+html {
+  background: url("/images/Background.jpg") no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
