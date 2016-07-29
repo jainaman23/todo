@@ -1,0 +1,20 @@
+/**
+ * @file
+ * List of Variables using over the site.
+ */
+/**
+ * Import Compass Library.
+ */
+@import 'compass';
+
+/**
+ * Font Family.
+ */
+@include font-face("heart", font-files("../fonts/The_Heart_of_Everything_Demo.ttf"));
+@include font-face("vibes", font-files("../fonts/GreatVibes_Regular.ttf"));
+@include font-face("expressway", font-files("../fonts/expressway.ttf"));
+
+/**
+ * Homepage.
+ */
+$welcome-main-heading: 50px;
