@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todo" ng-controller="Fundamental">
 <head>
   <title>Todo App</title>
   <!-- <base href="/"> -->
@@ -14,7 +14,10 @@
   <!-- APP Script -->
   <script type="text/javascript" src="/js/app/app.module.js"></script>
   <script type="text/javascript" src="/js/app/app.config.js"></script>
-
+  <script type="text/javascript" src="/js/app/app.controller.js"></script>
+  <!--Login Script-->
+  <script type="text/javascript" ng-if="false" src="/js/app/modules/login/login.module.js"></script>
+  <script type="text/javascript" ng-if="false" src="/js/app/modules/login/login.controller.js"></script>
   <!--stylesheet-->
   <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -23,6 +26,7 @@
 <div class="page-wrapper">
   <div class="container">
     <div class="row">
+      <div ng-class="msg_class">{{message}}</div>
       <div class="main-content" ng-view>
         <!-- Code from required template -->
       </div>

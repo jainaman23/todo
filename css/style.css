@@ -53,30 +53,37 @@ body {
   background: transparent;
   font-size: 16px;
   font-family: expressway, sans-serif;
+  height: 100%;
 }
 
 /* line 30, ../sass/style.scss */
+.page-wrapper, .container, .row {
+  height: 100%;
+}
+
+/* line 33, ../sass/style.scss */
 .main-content {
   -moz-animation: fade-in 0.8s;
   -webkit-animation: fade-in 0.8s;
   animation: fade-in 0.8s;
+  height: 100%;
 }
 
 /**
  * Homepage Welcome Banner.
  */
-/* line 37, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .welcome-banner {
   margin: 0 auto;
   text-align: center;
   position: relative;
   top: 250px;
 }
-/* line 42, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .welcome-banner h1 {
   font-size: 50px;
 }
-/* line 45, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .welcome-banner a {
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -84,14 +91,21 @@ body {
   -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.8);
 }
-/* line 50, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .welcome-banner a:hover {
   -moz-box-shadow: 0 0 1px 1px #286090;
   -webkit-box-shadow: 0 0 1px 1px #286090;
   box-shadow: 0 0 1px 1px #286090;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
+.btn {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.31);
+  margin-top: 20px;
+}
+
+/* line 65, ../sass/style.scss */
 .background-transparent {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMzMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -105,7 +119,22 @@ body {
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 61, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
+.alert {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  -moz-animation: fade-in 0.8s;
+  -webkit-animation: fade-in 0.8s;
+  animation: fade-in 0.8s;
+}
+
+/* line 78, ../sass/style.scss */
+.hide {
+  transition: display 0.8s;
+}
+
+/* line 82, ../sass/style.scss */
 .login-panel {
   width: 30%;
   margin: auto;
@@ -113,7 +142,7 @@ body {
   top: 165px;
   padding: 30px;
 }
-/* line 67, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .login-panel .form-control {
   background: transparent;
   border: none;
@@ -137,18 +166,11 @@ body {
 .login-panel .form-control::-webkit-input-placeholder {
   color: #fff;
 }
-/* line 77, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .login-panel h1 {
   color: #fff;
   margin-bottom: 25px;
   margin-top: 0px;
-}
-
-/* line 83, ../sass/style.scss */
-.btn {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.31);
-  margin-top: 20px;
 }
 
 @-moz-keyframes fade-in {
@@ -173,5 +195,29 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
